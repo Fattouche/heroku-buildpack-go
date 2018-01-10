@@ -1,7 +1,6 @@
 #!/bin/bash
 # usage: bin/compile <build-dir> <cache-dir> <env-dir>
 
-set -eo pipefail
 set -x
 echo "Running go buildpack"
 
@@ -137,6 +136,7 @@ ensureHG() {
 }
 
 ensureGlide() {
+	echo "WHADDDDUP"
     local glideVersion="${1}"
     local gPath="${cache}/glide/${glideVersion}/bin"
     local gBin="${gPath}/glide"
